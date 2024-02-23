@@ -1,0 +1,13 @@
+{
+  "name": "Grades portfolio",
+  "menu_start": "Start",
+  "menu_grades": "Grades",
+  "menu_help": "Help",
+  "menu_account": "\uD83E\uDDD1",
+  "menu_profile": "Profile",
+  "menu_settings": "Settings",
+  "menu_logout": "Logout",
+  "language_selector_label": "Language",
+  "placeholder_title": "This place intentionally left empty",
+  "placeholder_text": "It’s a place where you can grow your own UI \uD83D\uDDFF"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Portefeuille de notes",
+  "menu_start": "Début",
+  "menu_grades": "Notes",
+  "menu_help": "Aide",
+  "menu_account": "\uD83E\uDDD1",
+  "menu_profile": "Profil",
+  "menu_settings": "Paramètres",
+  "menu_logout": "Se déconnecter",
+  "language_selector_label": "Langue",
+  "placeholder_title": "Cet endroit a été intentionnellement laissé vide",
+  "placeholder_text": "C’est un endroit où vous pouvez développer votre propre interface utilisateur \uD83D\uDDFF"
+}
