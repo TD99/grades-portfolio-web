@@ -2,9 +2,9 @@ import {AppLayout, AppLayoutDrawerOpenedChangedEvent} from '@hilla/react-compone
 import {DrawerToggle} from '@hilla/react-components/DrawerToggle.js';
 import {Item} from '@hilla/react-components/Item.js';
 import {Scroller} from '@hilla/react-components/Scroller.js';
-import Placeholder from 'Frontend/components/placeholder/Placeholder.js';
+import Placeholder from 'Frontend/components/placeholder/Placeholder';
 import {MenuProps, routes, useViewMatches, ViewRouteObject} from 'Frontend/Router';
-import React, {Suspense, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {NavLink, Outlet} from 'react-router-dom';
 import {useTranslation} from "react-i18next";
 import css from './MainLayout.module.css';
@@ -19,10 +19,11 @@ type MenuRoute = ViewRouteObject &
   }>;
 
 export default function MenuOnLeftLayout() {
-  const [isDrawerOpened, setIsDrawerOpened] = useState(false);
+  const [isDrawerOpened, setIsDrawerOpened] = useState(true);
   const matches = useViewMatches();
   const {t} = useTranslation();
   const currentTitle = matches[matches.length - 1]?.handle?.title ?? 'Unknown';
+  const appLayoutRef = React.useRef<any>(null); //TODO fix type to be AppLayout without errors
 
   const menuRoutes = (routes[0]?.children || []).filter(
     (route) => route.path && route.handle && route.handle.icon && route.handle.title
@@ -32,8 +33,13 @@ export default function MenuOnLeftLayout() {
     setIsDrawerOpened(event.detail.value);
   }
 
+  useEffect(() => {
+    setIsDrawerOpened(appLayoutRef.current?.drawerOpened ?? false);
+  }, []);
+
   return (
-    <AppLayout className="block h-full" primarySection="drawer" onDrawerOpenedChanged={handleDrawerOpenedChanged}>
+    <AppLayout ref={appLayoutRef} className="block h-full" primarySection="drawer"
+               onDrawerOpenedChanged={handleDrawerOpenedChanged}>
       <header slot="drawer" style={{padding: "0"}}>
         {
           isDrawerOpened && <DrawerToggle className={css.circle} slot="navbar" aria-label="Menu toggle"/>
@@ -42,7 +48,7 @@ export default function MenuOnLeftLayout() {
       </header>
       <Scroller slot="drawer" scroll-direction="vertical">
         <nav className={css.navlist}>
-          {menuRoutes.map(({path, handle: {icon, title}}) => (
+          {menuRoutes.map(({path, handle: {icon, title, hide}}) => !hide && (
             <NavLink
               className={({isActive}) => `${css.navlink} ${isActive ? css.navlink_active : ''}`}
               key={path}
