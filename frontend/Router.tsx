@@ -1,4 +1,4 @@
-import MainLayout from 'Frontend/views/MainLayout.js';
+import MainLayout from 'Frontend/views/mainLayout/MainLayout';
 import {lazy} from 'react';
 import {createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches} from 'react-router-dom';
 import StartView from './views/start/StartView';
@@ -12,6 +12,7 @@ const SettingsView = lazy(async () => import('Frontend/views/settings/SettingsVi
 export type MenuProps = Readonly<{
   icon?: string;
   title?: string;
+  hide?: boolean;
 }>;
 
 export type ViewMeta = Readonly<{ handle?: MenuProps }>;
@@ -58,12 +59,12 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: '/profile',
         element: <ProfileView/>,
-        handle: {title: "i18n:menu_profile"}
+        handle: {icon: 'user-solid', title: "i18n:menu_profile", hide: true},
       },
       {
         path: '/settings',
         element: <SettingsView/>,
-        handle: {title: "i18n:menu_settings"}
+        handle: {icon: 'cog-solid', title: "i18n:menu_settings", hide: true}
       }
     ],
   },
