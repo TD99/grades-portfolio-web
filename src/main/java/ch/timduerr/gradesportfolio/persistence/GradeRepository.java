@@ -1,6 +1,6 @@
-package ch.timduerr.gradesportfolio.repositories;
+package ch.timduerr.gradesportfolio.persistence;
 
-import ch.timduerr.gradesportfolio.models.Grade;
+import ch.timduerr.gradesportfolio.entity.Grade;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

@@ -1,7 +1,7 @@
-package ch.timduerr.gradesportfolio.services;
+package ch.timduerr.gradesportfolio.service;
 
-import ch.timduerr.gradesportfolio.models.Grade;
-import ch.timduerr.gradesportfolio.repositories.GradeRepository;
+import ch.timduerr.gradesportfolio.entity.Grade;
+import ch.timduerr.gradesportfolio.persistence.GradeRepository;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.BrowserCallable;
 import dev.hilla.crud.ListRepositoryService;

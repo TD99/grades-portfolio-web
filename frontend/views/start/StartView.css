@@ -1,0 +1,7 @@
+.startview-root {
+    background: rgb(213, 51, 105);
+    background: linear-gradient(135deg, rgba(213, 51, 105, 1) 0%, rgba(218, 171, 82, 1) 100%);
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}

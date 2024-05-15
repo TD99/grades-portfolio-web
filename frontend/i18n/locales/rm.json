@@ -1,13 +1,14 @@
 {
-  "name": "Portefolio da notad",
-  "menu_start": "Cumenzar",
+  "greeting": "Allegra",
+  "language_selector_label": "Linguatg",
+  "menu_account": "🧑",
   "menu_grades": "Notas",
   "menu_help": "Agiut",
-  "menu_account": "\uD83E\uDDD1",
+  "menu_logout": "Logout",
   "menu_profile": "Profil",
   "menu_settings": "Configuraziuns",
-  "menu_logout": "Logout",
-  "language_selector_label": "Linguatg",
-  "placeholder_title": "Quest spaczi è deliberadamaint laschà vid",
-  "placeholder_text": "È in spaczi nua ti po crescher tia atgna UI \uD83D\uDDFF"
+  "menu_start": "Cumenzar",
+  "name": "Portefolio da notad",
+  "placeholder_text": "È in spaczi nua ti po crescher tia atgna UI 🗿",
+  "placeholder_title": "Quest spaczi è deliberadamaint laschà vid"
 }

@@ -1,13 +1,14 @@
 {
-  "name": "Portfolio voti",
-  "menu_start": "Inizio",
+  "greeting": "Ciao",
+  "language_selector_label": "Lingua",
+  "menu_account": "🧑",
   "menu_grades": "Voti",
   "menu_help": "Aiuto",
-  "menu_account": "\uD83E\uDDD1",
+  "menu_logout": "Esci",
   "menu_profile": "Profilo",
   "menu_settings": "Impostazioni",
-  "menu_logout": "Esci",
-  "language_selector_label": "Lingua",
-  "placeholder_title": "Questo spazio è intenzionalmente vuoto",
-  "placeholder_text": "È un luogo in cui puoi far crescere la tua UI \uD83D\uDDFF"
+  "menu_start": "Inizio",
+  "name": "Portfolio voti",
+  "placeholder_text": "È un luogo in cui puoi far crescere la tua UI 🗿",
+  "placeholder_title": "Questo spazio è intenzionalmente vuoto"
 }

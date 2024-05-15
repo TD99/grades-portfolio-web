@@ -2,6 +2,7 @@ import {createRoot} from 'react-dom/client';
 import App from './App';
 import i18n from "./i18n/config";
 import {I18nextProvider} from 'react-i18next';
+import "./themes/global/main.css";
 
 const root = createRoot(document.getElementById('outlet')!);
 root.render(

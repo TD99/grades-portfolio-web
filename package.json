@@ -23,6 +23,7 @@
     "@vaadin/bundles": "24.3.0",
     "@vaadin/common-frontend": "0.0.19",
     "@vaadin/router": "1.7.5",
+    "chart.js": "^4.4.2",
     "classnames": "^2.3.2",
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "3.1.0",
@@ -42,10 +43,13 @@
     "@vitejs/plugin-react": "4.2.0",
     "@vitejs/plugin-react-swc": "3.5.0",
     "async": "3.2.4",
+    "autoprefixer": "^10.4.18",
     "glob": "10.3.3",
+    "postcss": "^8.4.37",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.9.2",
     "strip-css-comments": "5.0.0",
+    "tailwindcss": "^3.4.1",
     "transform-ast": "2.4.4",
     "typescript": "5.3.3",
     "vite": "5.0.6",
@@ -82,7 +86,8 @@
     "@hilla/generator-typescript-plugin-subtypes": "$@hilla/generator-typescript-plugin-subtypes",
     "@hilla/react-crud": "$@hilla/react-crud",
     "react-helmet": "$react-helmet",
-    "react-i18next": "$react-i18next"
+    "react-i18next": "$react-i18next",
+    "chart.js": "$chart.js"
   },
   "vaadin": {
     "dependencies": {
@@ -126,6 +131,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "c5c51b352100249c341514682be0a5e18f00ac426b1019daefdbad6b955f7650"
+    "hash": "7abf6dea6c9badfcc8281bed2d58f3763ab1b80a80f10bc2724bd3a575c612c9"
   }
 }

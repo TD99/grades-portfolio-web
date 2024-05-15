@@ -1,6 +1,6 @@
-package ch.timduerr.gradesportfolio.services;
+package ch.timduerr.gradesportfolio.service;
 
-import ch.timduerr.gradesportfolio.models.UserInfo;
+import ch.timduerr.gradesportfolio.entity.UserInfo;
 import dev.hilla.BrowserCallable;
 import dev.hilla.Nonnull;
 import jakarta.annotation.security.PermitAll;

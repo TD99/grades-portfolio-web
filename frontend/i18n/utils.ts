@@ -32,3 +32,7 @@ export const getLanguageNameFromCode = (code: string) => {
       return code;
   }
 }
+
+export const capitalize = (s: string) => {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}

@@ -1,13 +1,14 @@
 {
-  "name": "Portefeuille de notes",
-  "menu_start": "Début",
+  "greeting": "Bonjour",
+  "language_selector_label": "Langue",
+  "menu_account": "🧑",
   "menu_grades": "Notes",
   "menu_help": "Aide",
-  "menu_account": "\uD83E\uDDD1",
+  "menu_logout": "Se déconnecter",
   "menu_profile": "Profil",
   "menu_settings": "Paramètres",
-  "menu_logout": "Se déconnecter",
-  "language_selector_label": "Langue",
-  "placeholder_title": "Cet endroit a été intentionnellement laissé vide",
-  "placeholder_text": "C’est un endroit où vous pouvez développer votre propre interface utilisateur \uD83D\uDDFF"
+  "menu_start": "Début",
+  "name": "Portefeuille de notes",
+  "placeholder_text": "C’est un endroit où vous pouvez développer votre propre interface utilisateur 🗿",
+  "placeholder_title": "Cet endroit a été intentionnellement laissé vide"
 }

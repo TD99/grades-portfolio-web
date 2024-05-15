@@ -1,13 +1,14 @@
 {
-  "name": "Notenportfolio",
-  "menu_start": "Start",
+  "greeting": "Hallo",
+  "language_selector_label": "Sprache",
+  "menu_account": "🧑",
   "menu_grades": "Noten",
   "menu_help": "Hilfe",
-  "menu_account": "\uD83E\uDDD1",
+  "menu_logout": "Abmelden",
   "menu_profile": "Profil",
   "menu_settings": "Einstellungen",
-  "menu_logout": "Abmelden",
-  "language_selector_label": "Sprache",
-  "placeholder_title": "Dieser Platz wurde absichtlich leer gelassen",
-  "placeholder_text": "Es ist ein Ort, an dem Sie Ihre eigene Benutzeroberfläche entwickeln können \uD83D\uDDFF"
+  "menu_start": "Start",
+  "name": "Notenportfolio",
+  "placeholder_text": "Es ist ein Ort, an dem Sie Ihre eigene Benutzeroberfläche entwickeln können 🗿",
+  "placeholder_title": "Dieser Platz wurde absichtlich leer gelassen"
 }
