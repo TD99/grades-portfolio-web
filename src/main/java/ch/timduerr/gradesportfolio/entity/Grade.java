@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -13,14 +14,18 @@ public class Grade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String subject;
-    private int grade;
+    private Date date;
+    private double value;
+    private double weight;
 
     public Grade() {
     }
 
-    public Grade(String subject, int grade) {
+    public Grade(String subject, Date date, double value, double weight) {
         this.subject = subject;
-        this.grade = grade;
+        this.date = date;
+        this.value = value;
+        this.weight = weight;
     }
 
     public Long getId() {
@@ -39,25 +44,41 @@ public class Grade {
         this.subject = subject;
     }
 
-    public int getGrade() {
-        return grade;
+    public Date getDate() {
+        return date;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Grade grade1 = (Grade) o;
-        return grade == grade1.grade && Objects.equals(id, grade1.id) && Objects.equals(subject, grade1.subject);
+        Grade grade = (Grade) o;
+        return Double.compare(value, grade.value) == 0 && Double.compare(weight, grade.weight) == 0 && Objects.equals(id, grade.id) && Objects.equals(subject, grade.subject) && Objects.equals(date, grade.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, subject, grade);
+        return Objects.hash(id, subject, date, value, weight);
     }
 
     @Override
@@ -65,7 +86,9 @@ public class Grade {
         return "Grade{" +
                 "id=" + id +
                 ", subject='" + subject + '\'' +
-                ", grade=" + grade +
+                ", date=" + date +
+                ", value=" + value +
+                ", weight=" + weight +
                 '}';
     }
 }
