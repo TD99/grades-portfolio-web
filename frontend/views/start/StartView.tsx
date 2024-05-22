@@ -11,9 +11,9 @@ export default function StartView() {
   const auth = useAuth();
 
   return (
-    <div className="startview-root p-l">
+    <div className="startview-root p-l relative overflow-hidden">
       <h2 className="text-white">{t('greeting')} {capitalize(auth.state.user?.name || "anonymous")}</h2><br/>
-      <div className="flex flex-wrap gap-m">
+      <div className="flex flex-wrap gap-m p-l h-full overflow-auto">
         <Widget title="Notenverlauf pro Abschluss" subtitle="Aktuell nur für BM verfügbar">
           <GradeProgressChartPerDegree data={[{name: 'BM', grades: [3.5, 4, 4.5, 5, 6]}]}/>
         </Widget>

@@ -24,32 +24,34 @@
     "@vaadin/common-frontend": "0.0.19",
     "@vaadin/router": "1.7.5",
     "chart.js": "^4.4.2",
-    "classnames": "^2.3.2",
+    "classnames": "^2.5.1",
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^14.0.5",
-    "react-router-dom": "^6.4.2"
+    "react-i18next": "^14.1.1",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
-    "@lit-labs/react": "^1.1.0",
+    "@lit-labs/react": "^1.2.1",
     "@rollup/plugin-replace": "5.0.4",
     "@rollup/pluginutils": "5.0.5",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "4.2.0",
     "@vitejs/plugin-react-swc": "3.5.0",
     "async": "3.2.4",
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "glob": "10.3.3",
-    "postcss": "^8.4.37",
+    "postcss": "^8.4.38",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.9.2",
     "strip-css-comments": "5.0.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "transform-ast": "2.4.4",
     "typescript": "5.3.3",
     "vite": "5.0.6",
@@ -87,7 +89,9 @@
     "@hilla/react-crud": "$@hilla/react-crud",
     "react-helmet": "$react-helmet",
     "react-i18next": "$react-i18next",
-    "chart.js": "$chart.js"
+    "chart.js": "$chart.js",
+    "react-draggable": "$react-draggable",
+    "react-icons": "$react-icons"
   },
   "vaadin": {
     "dependencies": {
@@ -131,6 +135,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "7abf6dea6c9badfcc8281bed2d58f3763ab1b80a80f10bc2724bd3a575c612c9"
+    "hash": "0f1793b1ec09845069c243eb8cf0faf11b33c6b6ef70b96b5d403f1cb1b6fc8b"
   }
 }
