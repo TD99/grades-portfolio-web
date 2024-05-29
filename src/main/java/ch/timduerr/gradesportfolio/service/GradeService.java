@@ -9,4 +9,20 @@ import dev.hilla.crud.ListRepositoryService;
 @BrowserCallable
 @AnonymousAllowed
 public class GradeService extends ListRepositoryService<Grade, Long, GradeRepository> {
+
+    private final GradeRepository gradeRepository;
+
+    public GradeService(GradeRepository gradeRepository) {
+        super(gradeRepository);
+        this.gradeRepository = gradeRepository;
+    }
+
+    public Grade save(Grade entity) {
+        return gradeRepository.save(entity);
+    }
+
+    public void delete(Long id) {
+        gradeRepository.deleteById(id);
+    }
+
 }

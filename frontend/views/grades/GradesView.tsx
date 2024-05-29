@@ -8,7 +8,7 @@ export default function GradesView() {
 
   return (
     <div className="flex flex-col h-full items-center justify-center p-l text-center box-border">
-      <AutoCrud service={GradeService} model={GradeModel}/>
+      <AutoCrud className="w-full h-full" service={GradeService} model={GradeModel}/>
     </div>
   );
 }

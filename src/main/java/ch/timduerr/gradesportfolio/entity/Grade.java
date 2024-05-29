@@ -1,9 +1,7 @@
 package ch.timduerr.gradesportfolio.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 import java.util.Objects;
@@ -13,19 +11,27 @@ public class Grade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String subject;
+    @NotNull
+    private String name;
     private Date date;
+    @NotNull
     private double value;
+    @NotNull
     private double weight;
+    @ManyToOne
+    @NotNull
+    private Subject subject;
 
     public Grade() {
     }
 
-    public Grade(String subject, Date date, double value, double weight) {
-        this.subject = subject;
+    public Grade(Long id, String name, Date date, double value, double weight, Subject subject) {
+        this.id = id;
+        this.name = name;
         this.date = date;
         this.value = value;
         this.weight = weight;
+        this.subject = subject;
     }
 
     public Long getId() {
@@ -36,12 +42,12 @@ public class Grade {
         this.id = id;
     }
 
-    public String getSubject() {
-        return subject;
+    public @NotNull String getName() {
+        return name;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setName(@NotNull String name) {
+        this.name = name;
     }
 
     public Date getDate() {
@@ -52,20 +58,30 @@ public class Grade {
         this.date = date;
     }
 
+    @NotNull
     public double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(@NotNull double value) {
         this.value = value;
     }
 
+    @NotNull
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(@NotNull double weight) {
         this.weight = weight;
+    }
+
+    public @NotNull Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(@NotNull Subject subject) {
+        this.subject = subject;
     }
 
     @Override
@@ -73,22 +89,23 @@ public class Grade {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Grade grade = (Grade) o;
-        return Double.compare(value, grade.value) == 0 && Double.compare(weight, grade.weight) == 0 && Objects.equals(id, grade.id) && Objects.equals(subject, grade.subject) && Objects.equals(date, grade.date);
+        return Double.compare(value, grade.value) == 0 && Double.compare(weight, grade.weight) == 0 && Objects.equals(id, grade.id) && Objects.equals(name, grade.name) && Objects.equals(date, grade.date) && Objects.equals(subject, grade.subject);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, subject, date, value, weight);
+        return Objects.hash(id, name, date, value, weight, subject);
     }
 
     @Override
     public String toString() {
         return "Grade{" +
                 "id=" + id +
-                ", subject='" + subject + '\'' +
+                ", name='" + name + '\'' +
                 ", date=" + date +
                 ", value=" + value +
                 ", weight=" + weight +
+                ", subject=" + subject +
                 '}';
     }
 }
